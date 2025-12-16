@@ -20,20 +20,24 @@
       <ul class="nav-links">
         <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
         <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li>
-          <a href="#" class="desktop-item">Shops &nbsp;<i class="fa-solid  fa-caret-down"></i></a>
-          <input type="checkbox" id="showDrop">
-          <label for="showDrop" class="mobile-item">Dropdown Menu</label>
+
+        <li class="dropdown">
+          <a href="#" class="desktop-item">
+            Shops &nbsp;<i class="fa-solid  fa-caret-down"></i>
+          </a>
           <ul class="drop-menu">
-            <li><a href="#">Tops</a></li>
-            <li><a href="#">Bottoms</a></li>
-            <li><a href="#">Shoes</a></li>
-            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Tops <span>></span></a></li>
+            <li><a href="#">Bottoms <span>></span></a></li>
+            <li><a href="#">Shoes <span>></span></a></li>
+            <li><a href="#">Accessories <span>></span></a></li>
           </ul>
         </li>
-        <li>
-          <a href="#" class="desktop-item">Resource Center &nbsp;<i class="fa-solid  fa-caret-down"></i></a>
+
+        <li><a href="#">Design Your Own</a></li>
+        <li><a href="#">Collaborate</a></li>
+
+        <li class="dropdown">
+          <a href="#" class="desktop-item">Community Hub &nbsp;<i class="fa-solid  fa-caret-down"></i></a>
           <input type="checkbox" id="showMega">
           <label for="showMega" class="mobile-item">Mega Menu</label>
           <div class="mega-box">
@@ -42,64 +46,64 @@
                 <img src="https://fadzrinmadu.github.io/hosted-assets/responsive-mega-menu-and-dropdown-menu-using-only-html-and-css/img.jpg" alt="">
               </div>
               <div class="row">
-                <header>Design Services</header>
+                <header>Community & Social</header>
                 <ul class="mega-links">
-                  <li><a href="#">Graphics</a></li>
-                  <li><a href="#">Vectors</a></li>
-                  <li><a href="#">Business cards</a></li>
-                  <li><a href="#">Custom logo</a></li>
+                  <li><a href="#">Product Forum</a></li> 
+                  <li><a href="#">Collaborators</a></li> 
+                  <li><a href="#">Gallery</a></li> 
+                  <li><a href="#">Contests/Events</a></li> 
                 </ul>
               </div>
               <div class="row">
-                <header>Email Services</header>
+                <header>Creative Tools</header>
                 <ul class="mega-links">
-                  <li><a href="#">Personal Email</a></li>
-                  <li><a href="#">Business Email</a></li>
-                  <li><a href="#">Mobile Email</a></li>
-                  <li><a href="#">Web Marketing</a></li>
+                  <li><a href="#">Design Your Own</a></li>
+                  <li><a href="#">Mix-and-Match Combos</a></li>
+                  <li><a href="#">Collaboration Requests</a></li>
+                  <li><a href="#">Template/Inspirations</a></li>
                 </ul>
               </div>
               <div class="row">
-                <header>Security services</header>
+                <header>Support & Security</header>
                 <ul class="mega-links">
-                  <li><a href="#">Site Seal</a></li>
-                  <li><a href="#">VPS Hosting</a></li>
-                  <li><a href="#">Privacy Seal</a></li>
-                  <li><a href="#">Website design</a></li>
+                  <li><a href="#">Account Settings</a></li>
+                  <li><a href="#">Help & FAQ</a></li>
+                  <li><a href="#">Points & Rewards Info</a></li>
+                  <li><a href="#">Report & Feedback</a></li>
                 </ul>
               </div>
             </div>
           </div>
         </li>
-      <li><a href="#">Feedback</a></li>
-      &nbsp;
-      &nbsp;
+
+      <li><a href="#">About</a></li>
+
       <li><i class="fa-solid fa-bell" id="notification"></i></li>
-      &nbsp;
-      &nbsp;
-      <img src="astronaut.jpg" class="user-pic" onclick="toggleMenu()">
+      <li><i class="fa-solid fa-cart-shopping" id="cart"></i></li>
+
+      <img src="img/astronaut.jpg" class="user-pic" onclick="toggleMenu()">
 
         <div class="sub-menu-wrap" id="subMenu">
           <div class="sub-menu">
             <div class="user-info">
-              <img src="astronaut.jpg">
-              <h2>Rico Villete</h2>
+              <img src="img/astronaut.jpg">
+              <h2>User</h2>
             </div>
             <hr>
 
             <a href="#" class="sub-menu-link">
               <i class="fa-solid fa-user"></i>
-              <p> Edit Profile</p>
+              <p>Dashboard</p>
               <span>></span>
             </a>
             <a href="#" class="sub-menu-link">
               <i class="fa-solid fa-gear"></i>
-              <p> Settings & Privacy</p>
+              <p>My Designs</p>
               <span>></span>
             </a>
             <a href="#" class="sub-menu-link">
               <i class="fa-solid fa-circle-question"></i>
-              <p> Help & Support</p>
+              <p>Favorites</p>
               <span>></span>
             </a>
             <a href="#" class="sub-menu-link">
@@ -109,11 +113,39 @@
             </a>
           </div>
         </div>
-
     </div>
   </nav>
 </header>
 
+<!-- SIDEBAR -->
+<div id="sidebar-hover-zone"></div>
+<div id="nav-bar">
+  <input type="checkbox" id="nav-toggle">
+
+  <div id="nav-header">
+    <a href="#" target="_blank" id="nav-title">
+      Menu
+    </a>
+    <label for="nav-toggle">
+      <i class="fa-solid fa-bars"></i>
+      <i class="fa-solid fa-angle-left"></i>
+    </label>
+    <hr>
+  </div>
+
+  <div id="nav-content">
+    <div class="nav-button"><i class="fas fa-star"></i><span>Surprise Me</span></div>
+    <div class="nav-button"><i class="fas fa-trophy"></i><span>Leaderboard</span></div>
+    <div class="nav-button"><i class="fas fa-clone"></i><span>New Arrivals</span></div>
+    <div class="nav-button"><i class="fas fa-fire"></i><span>Hot & Trending</span></div>
+    <div class="nav-button"><i class="fas fa-gamepad"></i><span>Play Games</span></div>
+    <div id="nav-content-highlight"></div>
+  </div>
+
+</div>
+
+
+<!-- MAIN CONTENT -->
 <div class="body-text">
   <div class="title">Welcome to our Merch Store</div>
   <div class="sub-title">play games and earn deals, and other rewards</div>
@@ -122,15 +154,81 @@
 
 
 <script src="index_script.js"></script>
-
 <script>
 
+  // USER PROFILE STYLE FUNCTIONS
   let subMenu = document.getElementById("subMenu");
+  let userPic = document.querySelector(".user-pic");
 
   function toggleMenu() {
       subMenu.classList.toggle("open-menu");
   }
 
+  document.addEventListener("click", function(event) {
+    if (!subMenu.contains(event.target) && !userPic.contains(event.target)) {
+      subMenu.classList.remove("open-menu");
+    }
+  });
+
+  // SIDEBAR STYLE FUNCTIONS
+  const sidebar = document.getElementById("nav-bar");
+  const hoverZone = document.getElementById("sidebar-hover-zone");
+  const navToggle = document.getElementById("nav-toggle")
+
+  let hideTimeout;
+
+  function showSidebar() {
+    clearTimeout(hideTimeout)
+    sidebar.style.left = "1vw"
+  }
+
+  function hideSidebar() {
+    hideTimeout = setTimeout(() => {
+      sidebar.style.left = "-250px";
+      navToggle.checked = false;
+    }, 500);
+  }
+
+  hoverZone.addEventListener("mouseenter", showSidebar);
+  hoverZone.addEventListener("mouseleave", hideSidebar);
+  sidebar.addEventListener("mouseenter", showSidebar);
+  sidebar.addEventListener("mouseleave", hideSidebar);
+
+
+  // DROPDOWN TOGGLE FUNCTIONALITY
+  document.addEventListener('DOMContentLoaded', function() {
+    const dropdowns = document.querySelectorAll('.dropdown');
+    
+    dropdowns.forEach(dropdown => {
+      const trigger = dropdown.querySelector('.desktop-item');
+      
+      if (trigger) {
+        trigger.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          // Close other dropdowns
+          dropdowns.forEach(other => {
+            if (other !== dropdown) {
+              other.classList.remove('active');
+            }
+          });
+          
+          // Toggle current dropdown
+          dropdown.classList.toggle('active');
+        });
+      }
+    });
+    
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.dropdown')) {
+        dropdowns.forEach(dropdown => {
+          dropdown.classList.remove('active');
+        });
+      }
+    });
+  });
 
 </script>
 </body>
