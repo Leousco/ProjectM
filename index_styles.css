@@ -19,29 +19,9 @@
 
 body {
     background-color: antiquewhite;
+    min-height: 300vh;
 }
 
-/* === MAIN CONTENT === */
-.body-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    text-align: center;
-    padding: 0 30px;
-}
-
-.body-text .title {
-    font-size: 45px;
-    font-weight: 600;
-}
-
-.body-text .sub-title {
-    font-size: 24px;
-    font-weight: 400;
-    margin-top: 10px;
-}
 
 /* === NAVIGATION BAR === */
 nav {
@@ -272,13 +252,19 @@ nav input {
     top: 100%;
     right: 40px;
     width: 240px;
-    max-height: 0px;
-    overflow: hidden;
-    transition: max-height 0.5s ease;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transform: translateY(10px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
 .sub-menu-wrap.open-menu {
-    max-height: 500px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
 }
 
 .sub-menu {
@@ -350,7 +336,12 @@ nav input {
     transform: translateX(3px);
 }
 
+.sub-menu-link p {
+    transition: transform 0.5s;
+}
+
 .sub-menu-link:hover p {
+    transform: translateX(3px);
     font-weight: 600;
 }
 

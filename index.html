@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Urbanite Store</title>
     <link rel="stylesheet" href="index_styles.css">
+    <link rel="stylesheet" href="slide.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   </head>
@@ -33,7 +34,6 @@
           </ul>
         </li>
 
-        <li><a href="#">Design Your Own</a></li>
         <li><a href="#">Collaborate</a></li>
 
         <li class="dropdown">
@@ -81,7 +81,7 @@
       <li><i class="fa-solid fa-bell" id="notification"></i></li>
       <li><i class="fa-solid fa-cart-shopping" id="cart"></i></li>
 
-      <img src="img/astronaut.jpg" class="user-pic" onclick="toggleMenu()">
+      <img src="img/astronaut.jpg" class="user-pic" onclick="toggleMenu()"> &nbsp;<p style="color: white;">User</p>
 
         <div class="sub-menu-wrap" id="subMenu">
           <div class="sub-menu">
@@ -97,12 +97,12 @@
               <span>></span>
             </a>
             <a href="#" class="sub-menu-link">
-              <i class="fa-solid fa-gear"></i>
+              <i class="fa-solid fa-object-group"></i>
               <p>My Designs</p>
               <span>></span>
             </a>
             <a href="#" class="sub-menu-link">
-              <i class="fa-solid fa-circle-question"></i>
+              <i class="fa-solid fa-heart"></i>
               <p>Favorites</p>
               <span>></span>
             </a>
@@ -146,10 +146,280 @@
 
 
 <!-- MAIN CONTENT -->
-<div class="body-text">
-  <div class="title">Welcome to our Merch Store</div>
-  <div class="sub-title">play games and earn deals, and other rewards</div>
+
+<!-- SLIDESHOW -->
+<div class="slideshow-wrapper">
+  <div class="slideshow">
+    <div class="slide active">
+      <img src="slide/img4.jpg" alt="">
+    </div>
+    <div class="slide">
+      <img src="slide/img2.jpg" alt="">
+    </div>
+    <div class="slide">
+      <img src="slide/img3.jpg" alt="">
+    </div>
+    <div class="slide">
+      <img src="slide/img5.jpg" alt="">
+    </div>
+  </div>
+
+  <div class="controls">
+    <button class="prev"><</button>
+    <button class="next">></button>
+  </div>
 </div>
+
+<!-- SEARCH BAR AND FILTER -->
+<section class="search-filter-section">
+  <div class="search-container">
+    
+      <div class="search-input-wrapper">
+        <input type="text" id="searchInput" placeholder="Search products, creators, or tags..." />
+        <ul id="suggestions" class="suggestions-list"></ul>
+      </div>
+      <button class="search-btn">
+        <i class="fas fa-magnifying-glass"></i>
+      </button>
+
+  </div>
+
+  <div class="filter-container">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="trending">Trending</button>
+    <button class="filter-btn" data-filter="new">New</button>
+    <button class="filter-btn" data-filter="contest">Contest</button>
+    <button class="filter-btn" data-filter="points">Points Only</button>
+    <button class="filter-btn" data-filter="creators">Creators</button>
+    <button class="filter-btn" data-filter="custom">Custom</button>
+  </div>
+</section>
+
+
+<!-- FEATURES SECTION -->
+<section class="feature-section">
+  <div class="feature-grid">
+
+    <div class="feature-card">
+      <i class="fa-solid fa-pen-nib"></i>
+      <h3>Design</h3>
+      <p>Create your own merch designs. Customize colors, text, and styles—no limits.</p>
+    </div>
+
+    <div class="feature-card">
+      <i class="fa-solid fa-people-group"></i>
+      <h3>Collaborate</h3>
+      <p>Co-design with other creators, remix ideas, and build merch together.</p>
+    </div>
+
+    <div class="feature-card">
+      <i class="fa-solid fa-gamepad"></i>
+      <h3>Play</h3>
+      <p>Earn points by playing mini-games, completing tasks, and engaging daily.</p>
+    </div>
+
+    <div class="feature-card">
+      <i class="fa-solid fa-trophy"></i>
+      <h3>Contests</h3>
+      <p>Join design battles, get voted by the community, and win exclusive rewards.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- FEATURED PRODUCTS SECTIION -->
+<section class="featured-section">
+  <div class="featured-header">
+    <h2>Featured Designs</h2>
+    <p>Top community picks and trending creations</p>
+  </div>
+
+  <div class="featured-grid">
+
+    <div class="design-card">
+      <img src="img/design1.jpg" alt="Design 1">
+      <div class="design-info">
+        <h4>Urban Flame Hoodie</h4>
+        <span>by CoolDesigns</span>
+      </div>
+    </div>
+
+    <div class="design-card">
+      <img src="img/design2.jpg" alt="Design 2">
+      <div class="design-info">
+        <h4>Neo Street Cap</h4>
+        <span>by ArtHub</span>
+      </div>
+    </div>
+
+    <div class="design-card">
+      <img src="img/design3.jpg" alt="Design 3">
+      <div class="design-info">
+        <h4>Minimal Wave Tee</h4>
+        <span>by UrbanWear</span>
+      </div>
+    </div>
+
+    <div class="design-card">
+      <img src="img/design4.jpg" alt="Design 4">
+      <div class="design-info">
+        <h4>Midnight Sneakers</h4>
+        <span>by MerchMasters</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="featured-footer">
+    <a href="#" class="view-all-btn">View All Designs</a>
+  </div>
+</section>
+
+
+<!-- REWARDS FOR GAMES SECTION -->
+<section class="rewards-section">
+  <div class="rewards-container">
+
+    <!-- LEFT: Visual -->
+    <div class="rewards-visual">
+      <div class="badge-card">
+        <i class="fa-solid fa-coins"></i>
+        <span>+500</span>
+      </div>
+      <div class="badge-card">
+        <i class="fa-solid fa-medal"></i>
+        <span>Creator</span>
+      </div>
+      <div class="badge-card">
+        <i class="fa-solid fa-fire"></i>
+        <span>Trending</span>
+      </div>
+    </div>
+
+    <!-- RIGHT: Text + CTA -->
+    <div class="rewards-content">
+      <h2>Earn Rewards While You Create</h2>
+      <p>
+        Design merch, collaborate with creators, join contests, and play mini-games.
+        Earn points, unlock badges, and redeem exclusive rewards.
+      </p>
+
+      <ul class="rewards-list">
+        <li>🪙 Redeem points for discounts</li>
+        <li>🏆 Unlock limited-edition items</li>
+        <li>🎨 Access exclusive design tools</li>
+        <li>🔥 Rank up on community leaderboards</li>
+      </ul>
+
+      <a href="#" class="rewards-btn">Start Earning Points</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CONTESTS SECTION -->
+<section class="live-contest-section">
+  <div class="live-contest-container">
+
+    <div class="contest-info">
+      <h2>LIVE CONTEST: "Winter Design Battle 2025"</h2>
+      <p>Vote for your favorite designs or submit your own creation before the deadline!</p>
+    </div>
+
+    <div class="contest-actions">
+      <div class="countdown-timer" id="countdown">
+        02d 11h 22m
+      </div>
+      <button class="contest-btn vote-btn">Vote</button>
+      <button class="contest-btn submit-btn">Submit</button>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CREATOR SPOTLIGHT -->
+<section class="creator-spotlight-section">
+  <h2>Creator Spotlight</h2>
+  <div class="creator-cards-container">
+
+    <div class="creator-card">
+      <!-- Avatar and Name -->
+      <div class="creator-info">
+        <img src="img/creator1.jpg" alt="Creator Avatar" class="creator-avatar">
+        <h3 class="creator-name">CoolDesigns</h3>
+      </div>
+
+      <!-- Small Products -->
+      <div class="creator-products">
+        <img src="img/product1.jpg" alt="Product 1">
+        <img src="img/product2.jpg" alt="Product 2">
+        <img src="img/product3.jpg" alt="Product 3">
+      </div>
+
+      <!-- Collaborate CTA -->
+      <button class="creator-collab-btn">View Merch</button>
+    </div>
+
+    <!-- Repeat cards for other creators -->
+    <div class="creator-card">
+      <div class="creator-info">
+        <img src="img/creator2.jpg" alt="Creator Avatar" class="creator-avatar">
+        <h3 class="creator-name">MerchMasters</h3>
+      </div>
+      <div class="creator-products">
+        <img src="img/product4.jpg" alt="Product 1">
+        <img src="img/product5.jpg" alt="Product 2">
+        <img src="img/product6.jpg" alt="Product 3">
+      </div>
+      <button class="creator-collab-btn">View Merch</button>
+    </div>
+
+    <div class="creator-card">
+      <div class="creator-info">
+        <img src="img/creator3.jpg" alt="Creator Avatar" class="creator-avatar">
+        <h3 class="creator-name">ArtHub</h3>
+      </div>
+      <div class="creator-products">
+        <img src="img/product7.jpg" alt="Product 1">
+        <img src="img/product8.jpg" alt="Product 2">
+        <img src="img/product9.jpg" alt="Product 3">
+      </div>
+      <button class="creator-collab-btn">View Merch</button>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- FOOTER SECTION -->
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <!-- Logo / Branding -->
+    <div class="footer-logo">
+      <a href="#">Urbanite</a>
+    </div>
+
+    <!-- Footer Links -->
+    <div class="footer-links">
+      <a href="#">About</a>
+      <a href="#">Contests</a>
+      <a href="#">Points</a>
+      <a href="#">Community</a>
+    </div>
+
+    <!-- Optional: copyright -->
+    <div class="footer-copy">
+      &copy; 2025 Urbanite. All rights reserved.
+    </div>
+
+  </div>
+</footer>
+
+
 
 
 
@@ -229,6 +499,127 @@
       }
     });
   });
+
+
+  // SLIDESHOW FUNCTION
+  const slides = document.querySelectorAll('.slide');
+  const nextBtn = document.querySelector('.next');
+  const prevBtn = document.querySelector('.prev');
+
+  let current = 0;
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+  }
+
+  nextBtn.addEventListener('click', () => {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  });
+
+  prevBtn.addEventListener('click', () => {
+    current = (current - 1 + slides.length) % slides.length;
+    showSlide(current);
+  });
+
+  // autoplay
+  setInterval(() => {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  }, 9000);
+
+
+  // SEARCH FILTER FUNCTIONS
+  const searchInput = document.getElementById('searchInput');
+  const suggestionsList = document.getElementById('suggestions');
+  const filterButtons = document.querySelectorAll('.filter-btn');
+
+  // Example default suggestions
+  const merchSuggestions = ['Hoodie', 'Cap', 'Shoes', 'T-Shirt', 'Jacket'];
+  const creatorSuggestions = ['CoolDesigns', 'ArtHub', 'MerchMasters', 'UrbanWear'];
+
+  // Get active filter from data-filter
+  function getActiveFilter() {
+    const active = document.querySelector('.filter-btn.active');
+    return active ? active.dataset.filter : 'all';
+  }
+
+  // Show suggestions
+  function showSuggestions(list) {
+    suggestionsList.innerHTML = '';
+    if (!list.length) {
+      suggestionsList.style.display = 'none';
+      return;
+    }
+    list.forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = item;
+      li.addEventListener('click', () => {
+        searchInput.value = item;
+        suggestionsList.style.display = 'none';
+      });
+      suggestionsList.appendChild(li);
+    });
+    suggestionsList.style.display = 'block';
+  }
+
+  // Listen for input
+  searchInput.addEventListener('input', () => {
+    const query = searchInput.value.toLowerCase();
+    const filter = getActiveFilter();
+
+    let suggestions = [];
+
+    if (filter === 'creators') {
+      suggestions = query 
+        ? creatorSuggestions.filter(s => s.toLowerCase().includes(query))
+        : creatorSuggestions; 
+    } else {
+      suggestions = query 
+        ? merchSuggestions.filter(s => s.toLowerCase().includes(query))
+        : merchSuggestions; 
+    }
+
+    showSuggestions(suggestions);
+  });
+
+  // Update active filter class
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      searchInput.dispatchEvent(new Event('input')); 
+    });
+  });
+
+  // Hide suggestions when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!searchInput.contains(e.target) && !suggestionsList.contains(e.target)) {
+      suggestionsList.style.display = 'none';
+    }
+  });
+
+
+  // EXAMPLE COUNTDOWN FOR THE CONTEST SECTION
+  const countdownEl = document.getElementById('countdown');
+  let countdownTime = 2*24*60*60 + 11*60*60 + 22*60;
+
+  function updateCountdown() {
+    const days = Math.floor(countdownTime / (24*3600));
+    const hours = Math.floor((countdownTime % (24*3600)) / 3600);
+    const minutes = Math.floor((countdownTime % 3600) / 60);
+
+    countdownEl.textContent = `${days}d ${hours}h ${minutes}m`;
+
+    if (countdownTime > 0) {
+      countdownTime--;
+      setTimeout(updateCountdown, 60000);
+    }
+  }
+
+  updateCountdown();
+
 
 </script>
 </body>
