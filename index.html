@@ -82,6 +82,8 @@
       <li><i class="fa-solid fa-bell" id="notification"></i></li>
       <li><i class="fa-solid fa-cart-shopping" id="cart"></i></li>
 
+      <li class="divider"></li>
+
       <img src="img/astronaut.jpg" class="user-pic" onclick="toggleMenu()"> &nbsp;<p style="color: white;">User</p>
 
         <div class="sub-menu-wrap" id="subMenu">
@@ -94,7 +96,7 @@
 
             <a href="#" class="sub-menu-link">
               <i class="fa-solid fa-user"></i>
-              <p>Dashboard</p>
+              <p>Profile</p>
               <span>></span>
             </a>
             <a href="#" class="sub-menu-link">
@@ -187,12 +189,11 @@
 
   <div class="filter-container">
     <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="trending">Trending</button>
     <button class="filter-btn" data-filter="new">New</button>
+    <button class="filter-btn" data-filter="trending">Trending</button>
     <button class="filter-btn" data-filter="contest">Contest</button>
-    <button class="filter-btn" data-filter="points">Points Only</button>
     <button class="filter-btn" data-filter="creators">Creators</button>
-    <button class="filter-btn" data-filter="custom">Custom</button>
+    <button class="filter-btn" data-filter="points">Points Only</button>
   </div>
 </section>
 
@@ -242,7 +243,10 @@
       <img src="img/design1.jpg" alt="Design 1">
       <div class="design-info">
         <h4>Urban Flame Hoodie</h4>
-        <span>by CoolDesigns</span>
+        <div class="design-meta">
+          <span>by CoolDesigns</span>
+          <span>₱ 159</span>
+        </div>
       </div>
     </div>
 
@@ -250,7 +254,10 @@
       <img src="img/design2.jpg" alt="Design 2">
       <div class="design-info">
         <h4>Neo Street Cap</h4>
-        <span>by ArtHub</span>
+        <div class="design-meta">
+          <span>by ArtHub</span>
+          <span>₱ 759</span>
+        </div>
       </div>
     </div>
 
@@ -258,7 +265,10 @@
       <img src="img/design3.jpg" alt="Design 3">
       <div class="design-info">
         <h4>Minimal Wave Tee</h4>
-        <span>by UrbanWear</span>
+        <div class="design-meta">
+          <span>by UrbanWear</span>
+          <span>₱ 599</span>
+        </div>
       </div>
     </div>
 
@@ -266,7 +276,12 @@
       <img src="img/design4.jpg" alt="Design 4">
       <div class="design-info">
         <h4>Midnight Sneakers</h4>
-        <span>by MerchMasters</span>
+
+        <div class="design-meta">
+          <span>by MerchMasters</span>
+          <span>₱ 1,999</span>
+        </div>
+
       </div>
     </div>
 
@@ -307,34 +322,13 @@
       </p>
 
       <ul class="rewards-list">
-        <li>🪙 Redeem points for discounts</li>
+        <li>💎 Redeem points for discounts</li>
         <li>🏆 Unlock limited-edition items</li>
         <li>🎨 Access exclusive design tools</li>
         <li>🔥 Rank up on community leaderboards</li>
       </ul>
 
       <a href="#" class="rewards-btn">Start Earning Points</a>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- CONTESTS SECTION -->
-<section class="live-contest-section">
-  <div class="live-contest-container">
-
-    <div class="contest-info">
-      <h2>LIVE CONTEST: "Winter Design Battle 2025"</h2>
-      <p>Vote for your favorite designs or submit your own creation before the deadline!</p>
-    </div>
-
-    <div class="contest-actions">
-      <div class="countdown-timer" id="countdown">
-        02d 11h 22m
-      </div>
-      <button class="contest-btn vote-btn">Vote</button>
-      <button class="contest-btn submit-btn">Submit</button>
     </div>
 
   </div>
@@ -361,7 +355,7 @@
       </div>
 
       <!-- Collaborate CTA -->
-      <button class="creator-collab-btn">View Merch</button>
+      <button class="creator-merch-btn">View Merch</button>
     </div>
 
     <!-- Repeat cards for other creators -->
@@ -375,7 +369,7 @@
         <img src="img/product5.jpg" alt="Product 2">
         <img src="img/product6.jpg" alt="Product 3">
       </div>
-      <button class="creator-collab-btn">View Merch</button>
+      <button class="creator-merch-btn">View Merch</button>
     </div>
 
     <div class="creator-card">
@@ -388,7 +382,27 @@
         <img src="img/product8.jpg" alt="Product 2">
         <img src="img/product9.jpg" alt="Product 3">
       </div>
-      <button class="creator-collab-btn">View Merch</button>
+      <button class="creator-merch-btn">View Merch</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTESTS SECTION -->
+<section class="live-contest-section">
+  <div class="live-contest-container">
+
+    <div class="contest-info">
+      <h2>LIVE CONTEST: "Winter Design Battle 2025"</h2>
+      <p>Vote for your favorite designs or submit your own creation before the deadline!</p>
+    </div>
+
+    <div class="contest-actions">
+      <div class="countdown-timer" id="countdown">
+        02d 11h 22m
+      </div>
+      <button class="contest-btn vote-btn">View Entries</button>
+      <button class="contest-btn submit-btn">Submit Design</button>
     </div>
 
   </div>
