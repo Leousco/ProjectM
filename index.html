@@ -4,8 +4,9 @@
 
     <meta charset="UTF-8">
     <title>Urbanite Store</title>
-    <link rel="stylesheet" href="index_styles.css">
-    <link rel="stylesheet" href="slide.css">
+    <!-- <link rel="stylesheet" href="enhanced_styles.css"> -->
+    <link rel="stylesheet" href="primary_index_styles.css">
+    <link rel="stylesheet" href="secondary_index_styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   </head>
@@ -197,7 +198,7 @@
 
 
 <!-- FEATURES SECTION -->
-<section class="feature-section">
+<!-- <section class="feature-section">
   <div class="feature-grid">
 
     <div class="feature-card">
@@ -225,7 +226,7 @@
     </div>
 
   </div>
-</section>
+</section> -->
 
 
 <!-- FEATURED PRODUCTS SECTIION -->
@@ -425,6 +426,7 @@
 
 <script src="index_script.js"></script>
 <script>
+  // SCRIPTS INSIDE THIS FILE ARE MOSTLY FRONTEND FUNCTIONS
 
   // USER PROFILE STYLE FUNCTIONS
   let subMenu = document.getElementById("subMenu");
@@ -523,102 +525,13 @@
     showSlide(current);
   });
 
-  // autoplay
   setInterval(() => {
     current = (current + 1) % slides.length;
     showSlide(current);
   }, 9000);
 
 
-  // SEARCH FILTER FUNCTIONS
-  const searchInput = document.getElementById('searchInput');
-  const suggestionsList = document.getElementById('suggestions');
-  const filterButtons = document.querySelectorAll('.filter-btn');
 
-  // Example default suggestions
-  const merchSuggestions = ['Hoodie', 'Cap', 'Shoes', 'T-Shirt', 'Jacket'];
-  const creatorSuggestions = ['CoolDesigns', 'ArtHub', 'MerchMasters', 'UrbanWear'];
-
-  // Get active filter from data-filter
-  function getActiveFilter() {
-    const active = document.querySelector('.filter-btn.active');
-    return active ? active.dataset.filter : 'all';
-  }
-
-  // Show suggestions
-  function showSuggestions(list) {
-    suggestionsList.innerHTML = '';
-    if (!list.length) {
-      suggestionsList.style.display = 'none';
-      return;
-    }
-    list.forEach(item => {
-      const li = document.createElement('li');
-      li.textContent = item;
-      li.addEventListener('click', () => {
-        searchInput.value = item;
-        suggestionsList.style.display = 'none';
-      });
-      suggestionsList.appendChild(li);
-    });
-    suggestionsList.style.display = 'block';
-  }
-
-  // Listen for input
-  searchInput.addEventListener('input', () => {
-    const query = searchInput.value.toLowerCase();
-    const filter = getActiveFilter();
-
-    let suggestions = [];
-
-    if (filter === 'creators') {
-      suggestions = query 
-        ? creatorSuggestions.filter(s => s.toLowerCase().includes(query))
-        : creatorSuggestions; 
-    } else {
-      suggestions = query 
-        ? merchSuggestions.filter(s => s.toLowerCase().includes(query))
-        : merchSuggestions; 
-    }
-
-    showSuggestions(suggestions);
-  });
-
-  // Update active filter class
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterButtons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      searchInput.dispatchEvent(new Event('input')); 
-    });
-  });
-
-  // Hide suggestions when clicking outside
-  document.addEventListener('click', (e) => {
-    if (!searchInput.contains(e.target) && !suggestionsList.contains(e.target)) {
-      suggestionsList.style.display = 'none';
-    }
-  });
-
-
-  // EXAMPLE COUNTDOWN FOR THE CONTEST SECTION
-  const countdownEl = document.getElementById('countdown');
-  let countdownTime = 2*24*60*60 + 11*60*60 + 22*60;
-
-  function updateCountdown() {
-    const days = Math.floor(countdownTime / (24*3600));
-    const hours = Math.floor((countdownTime % (24*3600)) / 3600);
-    const minutes = Math.floor((countdownTime % 3600) / 60);
-
-    countdownEl.textContent = `${days}d ${hours}h ${minutes}m`;
-
-    if (countdownTime > 0) {
-      countdownTime--;
-      setTimeout(updateCountdown, 60000);
-    }
-  }
-
-  updateCountdown();
 
 
 </script>
