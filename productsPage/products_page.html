@@ -1,0 +1,903 @@
+<html lang=>
+
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Urbanite Store</title>
+    <link rel="stylesheet" href="/primary_index_styles.css">
+    <link rel="stylesheet" href="products_page_styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  </head>
+
+<body>
+
+<header>
+  <nav>
+    <div class="wrapper">
+      <div class="logo"><a href="#">Urbanite</a></div>
+      <input type="radio" name="slider" id="menu-btn">
+      <input type="radio" name="slider" id="close-btn">
+      <ul class="nav-links">
+        <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+        <li><a href="/index.html">Home</a></li>
+
+        <li class="dropdown">
+          <a href="#" class="desktop-item">
+            Shops &nbsp;<i class="fa-solid  fa-caret-down"></i>
+          </a>
+          <ul class="drop-menu">
+            <li><a href="products_page.html">All Products</a></li>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Categories <i class="fas fa-caret-right"></i></a></li>
+            <li><a href="#">Trending Designs</a></li>
+            <li><a href="#">Featured Creators</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="desktop-item">
+            Create <i class="fa-solid fa-caret-down"></i>
+          </a>
+          <ul class="drop-menu">
+            <li><a href="#">Design Your Own</a></li>
+            <li><a href="#">Collaborate</a></li>
+            <li><a href="#">My Designs</a></li>
+            <li><a href="#">Templates</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="desktop-item">Community Hub &nbsp;<i class="fa-solid  fa-caret-down"></i></a>
+          <input type="checkbox" id="showMega">
+          <label for="showMega" class="mobile-item">Mega Menu</label>
+          <div class="mega-box">
+            <div class="content">
+              <div class="row">
+                <img src="https://fadzrinmadu.github.io/hosted-assets/responsive-mega-menu-and-dropdown-menu-using-only-html-and-css/img.jpg" alt="">
+              </div>
+              <div class="row">
+                <header>Community & Social</header>
+                <ul class="mega-links">
+                  <li><a href="#">Forum & Reviews</a></li> 
+                  <li><a href="#">Leaderboard</a></li> 
+                  <li><a href="#">Contests & Events</a></li> 
+                  <li><a href="#">Creators</a></li> 
+                </ul>
+              </div>
+              <div class="row">
+                <header>Support & Security</header>
+                <ul class="mega-links">
+                  <li><a href="#">Account Settings</a></li>
+                  <li><a href="#">Help & FAQ</a></li>
+                  <li><a href="#">Points & Rewards Info</a></li>
+                  <li><a href="#">Report & Feedback</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+
+      <li><a href="#">About</a></li>
+
+      <li class="divider"></li>
+
+      <li><i class="fa-solid fa-bell" id="notification"></i></li>
+      <li><i class="fa-solid fa-cart-shopping" id="cart"></i></li>
+
+      <img src="/img/astronaut.jpg" class="user-pic" onclick="toggleMenu()"> &nbsp;<p style="color: white;">User</p>
+
+        <div class="sub-menu-wrap" id="subMenu">
+          <div class="sub-menu">
+            <div class="user-info">
+              <img src="/img/astronaut.jpg">
+              <h2>User</h2>
+            </div>
+            <hr>
+
+            <a href="#" class="sub-menu-link">
+              <i class="fa-solid fa-user"></i>
+              <p>Profile</p>
+              <span>></span>
+            </a>
+            <a href="#" class="sub-menu-link">
+              <i class="fa-solid fa-object-group"></i>
+              <p>My Designs</p>
+              <span>></span>
+            </a>
+            <a href="#" class="sub-menu-link">
+              <i class="fa-solid fa-heart"></i>
+              <p>Favorites</p>
+              <span>></span>
+            </a>
+            <a href="#" class="sub-menu-link">
+              <i class="fa-solid fa-right-from-bracket"></i>
+              <p> Logout</p>
+              <span>></span>
+            </a>
+          </div>
+        </div>
+    </div>
+  </nav>
+</header>
+
+
+<!-- SIDEBAR -->
+<div id="sidebar-hover-zone"></div>
+<div id="nav-bar">
+  <input type="checkbox" id="nav-toggle">
+
+  <div id="nav-header">
+    <a href="#" target="_blank" id="nav-title">
+      Menu
+    </a>
+    <label for="nav-toggle">
+      <i class="fa-solid fa-bars"></i>
+      <i class="fa-solid fa-angle-left"></i>
+    </label>
+    <hr>
+  </div>
+
+  <div id="nav-content">
+    <!-- Quick Actions -->
+    <div class="nav-section-title">Quick Actions</div>
+    <div class="nav-button"><i class="fas fa-palette"></i><span>Create Design</span></div>
+    <div class="nav-button"><i class="fas fa-users"></i><span>Collaborate</span></div>
+    <div class="nav-button"><i class="fas fa-trophy"></i><span>Join Contest</span></div>
+    
+    <!-- Discover -->
+    <div class="nav-section-title">Discover</div>
+    <div class="nav-button"><i class="fas fa-fire"></i><span>Trending</span></div>
+    <div class="nav-button"><i class="fas fa-clone"></i><span>New Arrivals</span></div>
+    <div class="nav-button"><i class="fas fa-gem"></i><span>Limited Edition</span></div>
+    
+    <!-- Gamification -->
+    <div class="nav-section-title">Earn Rewards</div>
+    <div class="nav-button"><i class="fas fa-tasks"></i><span>Daily Tasks</span></div>
+    <div class="nav-button"><i class="fas fa-gamepad"></i><span>Mini Games</span></div>
+    <div class="nav-button"><i class="fas fa-gift"></i><span>My Rewards</span></div>
+  </div>
+
+</div>
+
+
+<!-- MAIN CONTENT -->
+
+<main class="products-container">
+  
+  <!-- Filters Sidebar -->
+  <aside class="filters-sidebar">
+    <div class="filters-header">
+      <h2>Filters</h2>
+      <button class="clear-filters">Clear All</button>
+    </div>
+
+    <!-- Price Filter -->
+    <div class="filter-section">
+      <h3 class="filter-title">
+        Price Range
+        <i class="fas fa-chevron-down"></i>
+      </h3>
+      <div class="filter-content">
+        <div class="price-inputs">
+          <input type="number" placeholder="Min" class="price-input" id="min-price">
+          <span>—</span>
+          <input type="number" placeholder="Max" class="price-input" id="max-price">
+        </div>
+        <div class="price-range-slider">
+          <input type="range" min="0" max="1000" value="0" class="slider" id="price-slider">
+        </div>
+      </div>
+    </div>
+
+    <!-- Category Filter -->
+    <div class="filter-section">
+      <h3 class="filter-title">
+        Categories
+        <i class="fas fa-chevron-down"></i>
+      </h3>
+      <div class="filter-content">
+        <label class="filter-checkbox">
+          <input type="checkbox" name="category" value="tops">
+          <span class="checkmark"></span>
+          <span class="label-text">Tops</span>
+          <span class="count">(24)</span>
+        </label>
+        <label class="filter-checkbox">
+          <input type="checkbox" name="category" value="bottoms">
+          <span class="checkmark"></span>
+          <span class="label-text">Bottoms</span>
+          <span class="count">(18)</span>
+        </label>
+        <label class="filter-checkbox">
+          <input type="checkbox" name="category" value="shoes">
+          <span class="checkmark"></span>
+          <span class="label-text">Footwear</span>
+          <span class="count">(32)</span>
+        </label>
+        <label class="filter-checkbox">
+          <input type="checkbox" name="category" value="accessories">
+          <span class="checkmark"></span>
+          <span class="label-text">Accessories</span>
+          <span class="count">(15)</span>
+        </label>
+        <label class="filter-checkbox">
+          <input type="checkbox" name="category" value="accessories">
+          <span class="checkmark"></span>
+          <span class="label-text">Electronics</span>
+          <span class="count">(55)</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Size Filter -->
+    <div class="filter-section">
+      <h3 class="filter-title">
+        Size
+        <i class="fas fa-chevron-down"></i>
+      </h3>
+      <div class="filter-content">
+        <div class="size-options">
+          <button class="size-btn">XS</button>
+          <button class="size-btn">S</button>
+          <button class="size-btn">M</button>
+          <button class="size-btn">L</button>
+          <button class="size-btn">XL</button>
+          <button class="size-btn">XXL</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Brand Filter -->
+    <div class="filter-section">
+      <h3 class="filter-title">
+        Popular Stores
+        <i class="fas fa-chevron-down"></i>
+      </h3>
+      <div class="filter-content">
+        <label class="filter-checkbox">
+          <input type="checkbox" name="brand" value="nike">
+          <span class="checkmark"></span>
+          <span class="label-text">ArtHub</span>
+          <span class="count">(12)</span>
+        </label>
+        <label class="filter-checkbox">
+          <input type="checkbox" name="brand" value="adidas">
+          <span class="checkmark"></span>
+          <span class="label-text">MarchMaster</span>
+          <span class="count">(8)</span>
+        </label>
+        <label class="filter-checkbox">
+          <input type="checkbox" name="brand" value="puma">
+          <span class="checkmark"></span>
+          <span class="label-text">CoolDesigns</span>
+          <span class="count">(6)</span>
+        </label>
+        <label class="filter-checkbox">
+          <input type="checkbox" name="brand" value="urbanite">
+          <span class="checkmark"></span>
+          <span class="label-text">Urbanite Original</span>
+          <span class="count">(45)</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Rating Filter -->
+    <div class="filter-section">
+      <h3 class="filter-title">
+        Rating
+        <i class="fas fa-chevron-down"></i>
+      </h3>
+      <div class="filter-content">
+        <label class="filter-checkbox">
+          <input type="radio" name="rating" value="5">
+          <span class="checkmark"></span>
+          <span class="rating-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </span>
+          <span class="count">(8)</span>
+        </label>
+        <label class="filter-checkbox">
+          <input type="radio" name="rating" value="4">
+          <span class="checkmark"></span>
+          <span class="rating-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </span>
+          <span class="count">&amp; up (24)</span>
+        </label>
+        <label class="filter-checkbox">
+          <input type="radio" name="rating" value="3">
+          <span class="checkmark"></span>
+          <span class="rating-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          </span>
+          <span class="count">&amp; up (56)</span>
+        </label>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- Products Area -->
+  <section class="products-area">
+    
+    <!-- Products Header -->
+    <div class="products-header">
+      <div class="header-left">
+        <h1>All Products</h1>
+        <span class="product-count">Showing 89 products</span>
+      </div>
+
+      <div class="header-right">
+
+        <div class="search-bar">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Search products..." class="search-input">
+        </div>
+
+        <select class="sort-select">
+          <option value="featured">Featured</option>
+          <option value="newest">New</option>
+          <option value="trend">Trending</option>
+          <option value="rating">Top Rated</option>
+        </select>
+        <div class="view-toggle">
+          <button class="view-btn active" data-view="grid">
+            <i class="fas fa-th"></i>
+          </button>
+          <button class="view-btn" data-view="list">
+            <i class="fas fa-list"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="products-grid">
+      
+      <!-- Product Card 1 -->
+      <div class="product-card">
+        <div class="card-badge">New</div>
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400" alt="Product">
+          <div class="card-overlay">
+            <button class="quick-view-btn">Quick View</button>
+          </div>
+          <button class="wishlist-btn">
+            <i class="far fa-heart"></i>
+          </button>
+        </div>
+        <div class="card-content">
+          <div class="card-category">Tops</div>
+          <h3 class="card-title">Urban Graphic Tee</h3>
+          <div class="card-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>(4.5)</span>
+          </div>
+          <div class="card-price">
+            <span class="current-price">$29.99</span>
+            <span class="original-price">$39.99</span>
+          </div>
+          <button class="add-to-cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Product Card 2 -->
+      <div class="product-card">
+        <div class="card-badge sale">-20%</div>
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=400" alt="Product">
+          <div class="card-overlay">
+            <button class="quick-view-btn">Quick View</button>
+          </div>
+          <button class="wishlist-btn">
+            <i class="far fa-heart"></i>
+          </button>
+        </div>
+        <div class="card-content">
+          <div class="card-category">Bottoms</div>
+          <h3 class="card-title">Classic Jeans</h3>
+          <div class="card-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>(4.0)</span>
+          </div>
+          <div class="card-price">
+            <span class="current-price">$79.99</span>
+            <span class="original-price">$99.99</span>
+          </div>
+          <button class="add-to-cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Product Card 3 -->
+      <div class="product-card">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1475178626620-a4d074967452?w=400" alt="Product">
+          <div class="card-overlay">
+            <button class="quick-view-btn">Quick View</button>
+          </div>
+          <button class="wishlist-btn">
+            <i class="far fa-heart"></i>
+          </button>
+        </div>
+        <div class="card-content">
+          <div class="card-category">Bottoms</div>
+          <h3 class="card-title">Slim Fit Jeans</h3>
+          <div class="card-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>(5.0)</span>
+          </div>
+          <div class="card-price">
+            <span class="current-price">$59.99</span>
+          </div>
+          <button class="add-to-cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Product Card 4 -->
+      <div class="product-card">
+        <div class="card-badge hot">Hot</div>
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400" alt="Product">
+          <div class="card-overlay">
+            <button class="quick-view-btn">Quick View</button>
+          </div>
+          <button class="wishlist-btn">
+            <i class="far fa-heart"></i>
+          </button>
+        </div>
+        <div class="card-content">
+          <div class="card-category">Tops</div>
+          <h3 class="card-title">Premium Jacket</h3>
+          <div class="card-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>(4.7)</span>
+          </div>
+          <div class="card-price">
+            <span class="current-price">$149.99</span>
+          </div>
+          <button class="add-to-cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Product Card 5 -->
+      <div class="product-card">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400" alt="Product">
+          <div class="card-overlay">
+            <button class="quick-view-btn">Quick View</button>
+          </div>
+          <button class="wishlist-btn">
+            <i class="far fa-heart"></i>
+          </button>
+        </div>
+        <div class="card-content">
+          <div class="card-category">Tops</div>
+          <h3 class="card-title">Casual Hoodie</h3>
+          <div class="card-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>(4.2)</span>
+          </div>
+          <div class="card-price">
+            <span class="current-price">$49.99</span>
+          </div>
+          <button class="add-to-cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Product Card 6 -->
+      <div class="product-card">
+        <div class="card-badge sale">-15%</div>
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=400" alt="Product">
+          <div class="card-overlay">
+            <button class="quick-view-btn">Quick View</button>
+          </div>
+          <button class="wishlist-btn">
+            <i class="far fa-heart"></i>
+          </button>
+        </div>
+        <div class="card-content">
+          <div class="card-category">Accessories</div>
+          <h3 class="card-title">Stylish Sunglasses</h3>
+          <div class="card-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>(4.9)</span>
+          </div>
+          <div class="card-price">
+            <span class="current-price">$34.99</span>
+            <span class="original-price">$41.99</span>
+          </div>
+          <button class="add-to-cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Product Card 7 -->
+      <div class="product-card">
+        <div class="card-image">
+          <img src="/img/shoes.jpg" alt="Product">
+          <div class="card-overlay">
+            <button class="quick-view-btn">Quick View</button>
+          </div>
+          <button class="wishlist-btn">
+            <i class="far fa-heart"></i>
+          </button>
+        </div>
+        <div class="card-content">
+          <div class="card-category">Shoes</div>
+          <h3 class="card-title">Running Shoes Pro</h3>
+          <div class="card-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>(4.6)</span>
+          </div>
+          <div class="card-price">
+            <span class="current-price">$89.99</span>
+          </div>
+          <button class="add-to-cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Product Card 8 -->
+      <div class="product-card">
+        <div class="card-badge">New</div>
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=400" alt="Product">
+          <div class="card-overlay">
+            <button class="quick-view-btn">Quick View</button>
+          </div>
+          <button class="wishlist-btn">
+            <i class="far fa-heart"></i>
+          </button>
+        </div>
+        <div class="card-content">
+          <div class="card-category">Bottoms</div>
+          <h3 class="card-title">Cargo Pants</h3>
+          <div class="card-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>(4.3)</span>
+          </div>
+          <div class="card-price">
+            <span class="current-price">$54.99</span>
+          </div>
+          <button class="add-to-cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+
+      <!-- Product Card 9 -->
+      <div class="product-card">
+        <div class="card-badge sale">-25%</div>
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400" alt="Product">
+          <div class="card-overlay">
+            <button class="quick-view-btn">Quick View</button>
+          </div>
+          <button class="wishlist-btn">
+            <i class="far fa-heart"></i>
+          </button>
+        </div>
+        <div class="card-content">
+          <div class="card-category">Accessories</div>
+          <h3 class="card-title">Leather Shoes</h3>
+          <div class="card-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>(4.8)</span>
+          </div>
+          <div class="card-price">
+            <span class="current-price">$67.49</span>
+            <span class="original-price">$89.99</span>
+          </div>
+          <button class="add-to-cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Product Card 10 -->
+      <div class="product-card">
+        <div class="card-badge hot">Hot</div>
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400" alt="Product">
+          <div class="card-overlay">
+            <button class="quick-view-btn">Quick View</button>
+          </div>
+          <button class="wishlist-btn">
+            <i class="far fa-heart"></i>
+          </button>
+        </div>
+        <div class="card-content">
+          <div class="card-category">Shoes</div>
+          <h3 class="card-title">High-Top Sneakers</h3>
+          <div class="card-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>(4.6)</span>
+          </div>
+          <div class="card-price">
+            <span class="current-price">$94.99</span>
+          </div>
+          <button class="add-to-cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Product Card 11 -->
+      <div class="product-card">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=400" alt="Product">
+          <div class="card-overlay">
+            <button class="quick-view-btn">Quick View</button>
+          </div>
+          <button class="wishlist-btn">
+            <i class="far fa-heart"></i>
+          </button>
+        </div>
+        <div class="card-content">
+          <div class="card-category">Tops</div>
+          <h3 class="card-title">Vintage Band Tee</h3>
+          <div class="card-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>(4.1)</span>
+          </div>
+          <div class="card-price">
+            <span class="current-price">$34.99</span>
+          </div>
+          <button class="add-to-cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Product Card 12 -->
+      <div class="product-card">
+        <div class="card-badge sale">-30%</div>
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1582418702059-97ebafb35d09?w=400" alt="Product">
+          <div class="card-overlay">
+            <button class="quick-view-btn">Quick View</button>
+          </div>
+          <button class="wishlist-btn">
+            <i class="far fa-heart"></i>
+          </button>
+        </div>
+        <div class="card-content">
+          <div class="card-category">Accessories</div>
+          <h3 class="card-title">Canvas Tote Bag</h3>
+          <div class="card-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>(4.9)</span>
+          </div>
+          <div class="card-price">
+            <span class="current-price">$24.49</span>
+            <span class="original-price">$34.99</span>
+          </div>
+          <button class="add-to-cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Pagination -->
+    <div class="pagination">
+      <button class="page-btn" disabled>
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="page-btn active">1</button>
+      <button class="page-btn">2</button>
+      <button class="page-btn">3</button>
+      <button class="page-btn">4</button>
+      <span class="page-dots">...</span>
+      <button class="page-btn">12</button>
+      <button class="page-btn">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+
+  </section>
+
+</main>
+
+
+<!-- FOOTER SECTION -->
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <!-- Logo / Branding -->
+    <div class="footer-logo">
+      <a href="#">Urbanite</a>
+    </div>
+
+    <!-- Footer Links -->
+    <div class="footer-links">
+      <a href="#">About</a>
+      <a href="#">Contests</a>
+      <a href="#">Points</a>
+      <a href="#">Community</a>
+    </div>
+
+    <!-- Optional: copyright -->
+    <div class="footer-copy">
+      &copy; 2025 Urbanite. All rights reserved.
+    </div>
+
+  </div>
+</footer>
+
+
+
+
+
+
+<script>
+  // SCRIPTS INSIDE THIS FILE ARE MOSTLY FRONTEND FUNCTIONS
+
+  // USER PROFILE STYLE FUNCTIONS
+  let subMenu = document.getElementById("subMenu");
+  let userPic = document.querySelector(".user-pic");
+
+  function toggleMenu() {
+      subMenu.classList.toggle("open-menu");
+  }
+
+  document.addEventListener("click", function(event) {
+    if (!subMenu.contains(event.target) && !userPic.contains(event.target)) {
+      subMenu.classList.remove("open-menu");
+    }
+  });
+
+  // SIDEBAR STYLE FUNCTIONS
+  const sidebar = document.getElementById("nav-bar");
+  const hoverZone = document.getElementById("sidebar-hover-zone");
+  const navToggle = document.getElementById("nav-toggle")
+
+  let hideTimeout;
+
+  function showSidebar() {
+    clearTimeout(hideTimeout)
+    sidebar.style.left = "1vw"
+  }
+
+  function hideSidebar() {
+    hideTimeout = setTimeout(() => {
+      sidebar.style.left = "-250px";
+      navToggle.checked = false;
+    }, 500);
+  }
+
+  hoverZone.addEventListener("mouseenter", showSidebar);
+  hoverZone.addEventListener("mouseleave", hideSidebar);
+  sidebar.addEventListener("mouseenter", showSidebar);
+  sidebar.addEventListener("mouseleave", hideSidebar);
+
+
+  // DROPDOWN TOGGLE FUNCTIONALITY
+  document.addEventListener('DOMContentLoaded', function() {
+    const dropdowns = document.querySelectorAll('.dropdown');
+    
+    dropdowns.forEach(dropdown => {
+      const trigger = dropdown.querySelector('.desktop-item');
+      
+      if (trigger) {
+        trigger.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          // Close other dropdowns
+          dropdowns.forEach(other => {
+            if (other !== dropdown) {
+              other.classList.remove('active');
+            }
+          });
+          
+          // Toggle current dropdown
+          dropdown.classList.toggle('active');
+        });
+      }
+    });
+    
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.dropdown')) {
+        dropdowns.forEach(dropdown => {
+          dropdown.classList.remove('active');
+        });
+      }
+    });
+  });
+
+
+</script>
+</body>
+
+</html>
