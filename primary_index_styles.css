@@ -124,7 +124,6 @@ nav .wrapper {
 .nav-links .drop-menu {
     position: absolute;
     background: var(--bg-card);
-    backdrop-filter: blur(20px);
     border: 1px solid var(--border);
     border-radius: 16px;
     width: 200px;
@@ -172,17 +171,54 @@ nav .wrapper {
     transform: translateY(0);
 }
 
+/* Hide nested menu by default */
+.drop-menu .nested-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 0;
+    min-width: 150px;
+    z-index: 10;
+  }
+  
+  /* Show on hover */
+  .drop-menu .nested-dropdown:hover > .nested-menu {
+    display: block;
+  }
+  
+  /* Optional: style nested links */
+  .drop-menu .nested-menu li a {
+    padding: 8px 16px;
+    display: block;
+    color: var(--text-primary);
+  }
+  
+  .drop-menu .nested-menu li a:hover {
+    background: var(--bg-tertiary);
+  }
+  
+
 /* === MEGA MENU === */
 .mega-box {
     position: absolute;
-    left: 0;
-    width: 100%;
-    padding: 0 40px;
+    left: 15%;
     top: 80px;
+    
+    width: auto;
+    max-width: 960px;
+    padding: 0;
+    
     opacity: 0;
     visibility: hidden;
+    
     transform: translateY(-10px);
     transition: all var(--transition-base);
+
+    border-radius: 20px;
 }
 
 .mega-box .content {
@@ -269,7 +305,8 @@ nav input {
 
 /* === NOTIFICATION ICON === */
 #notification,
-#cart {
+#cart,
+#search {
     font-size: 20px;
     color: var(--text-primary);
     margin-right: 15px;
@@ -277,30 +314,20 @@ nav input {
     transition: all var(--transition-base);
     position: relative;
     padding: 10px;
-    border-radius: 10px;
-    border: 2px solid var(--border);
+    border-radius: 50%;
+    /* border: 2px solid var(--border); */
 }
 
 #notification:hover,
-#cart:hover {
+#cart:hover,
+#search:hover {
     background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.1));
     transform: translateY(-2px);
     box-shadow: var(--shadow-glow);
 }
 
 /* Badge for notifications */
-#notification::after {
-    content: '';
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    width: 8px;
-    height: 8px;
-    background: var(--danger);
-    border-radius: 50%;
-    border: 2px solid var(--bg-secondary);
-}
-
+#notification::after,
 #cart::after {
     content: '';
     position: absolute;
@@ -312,6 +339,7 @@ nav input {
     border-radius: 50%;
     border: 2px solid var(--bg-secondary);
 }
+
 
 @keyframes pulse {
     0%, 100% {
@@ -325,9 +353,9 @@ nav input {
 }
 
 .divider {
-    width: 1px;
+    width: 2px;
     height: 50px;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.24);
     margin: 0 12px;
 }
 
@@ -371,7 +399,6 @@ nav input {
 
 .sub-menu {
     background: var(--bg-card);
-    backdrop-filter: blur(20px);
     border: 1px solid var(--border);
     padding: 20px;
     border-radius: 16px;

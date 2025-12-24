@@ -25,14 +25,13 @@
 
         <li class="dropdown">
           <a href="#" class="desktop-item">
-            Shops &nbsp;<i class="fa-solid  fa-caret-down"></i>
+            Shop &nbsp;<i class="fa-solid  fa-caret-down"></i>
           </a>
           <ul class="drop-menu">
             <li><a href="products_page.html">All Products</a></li>
             <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Trending</a></li>
             <li><a href="#">Categories <i class="fas fa-caret-right"></i></a></li>
-            <li><a href="#">Trending Designs</a></li>
-            <li><a href="#">Featured Creators</a></li>
           </ul>
         </li>
 
@@ -82,7 +81,8 @@
       <li><a href="#">About</a></li>
 
       <li class="divider"></li>
-
+      
+      <li><i class="fa-solid fa-magnifying-glass" id="search"></i></li>
       <li><i class="fa-solid fa-bell" id="notification"></i></li>
       <li><i class="fa-solid fa-cart-shopping" id="cart"></i></li>
 
@@ -181,9 +181,9 @@
       </h3>
       <div class="filter-content">
         <div class="price-inputs">
-          <input type="number" placeholder="Min" class="price-input" id="min-price">
+          <input type="number" placeholder="₱ Min" class="price-input" id="min-price">
           <span>—</span>
-          <input type="number" placeholder="Max" class="price-input" id="max-price">
+          <input type="number" placeholder="₱ Max" class="price-input" id="max-price">
         </div>
         <div class="price-range-slider">
           <input type="range" min="0" max="1000" value="0" class="slider" id="price-slider">
@@ -312,7 +312,7 @@
             <i class="fas fa-star"></i>
             <i class="far fa-star"></i>
           </span>
-          <span class="count">&amp; up (24)</span>
+          <span class="count">& up (24)</span>
         </label>
         <label class="filter-checkbox">
           <input type="radio" name="rating" value="3">
@@ -374,7 +374,6 @@
         <div class="card-image">
           <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400" alt="Product">
           <div class="card-overlay">
-            <button class="quick-view-btn">Quick View</button>
           </div>
           <button class="wishlist-btn">
             <i class="far fa-heart"></i>
@@ -395,9 +394,9 @@
             <span class="current-price">$29.99</span>
             <span class="original-price">$39.99</span>
           </div>
-          <button class="add-to-cart-btn">
-            <i class="fas fa-shopping-cart"></i>
-            Add to Cart
+          <button class="view-product-btn">
+            <i class="fas fa-eye"></i>
+            View Product
           </button>
         </div>
       </div>
@@ -408,7 +407,7 @@
         <div class="card-image">
           <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=400" alt="Product">
           <div class="card-overlay">
-            <button class="quick-view-btn">Quick View</button>
+
           </div>
           <button class="wishlist-btn">
             <i class="far fa-heart"></i>
@@ -429,9 +428,9 @@
             <span class="current-price">$79.99</span>
             <span class="original-price">$99.99</span>
           </div>
-          <button class="add-to-cart-btn">
-            <i class="fas fa-shopping-cart"></i>
-            Add to Cart
+          <button class="view-product-btn">
+            <i class="fas fa-eye"></i>
+            View Product
           </button>
         </div>
       </div>
@@ -441,7 +440,7 @@
         <div class="card-image">
           <img src="https://images.unsplash.com/photo-1475178626620-a4d074967452?w=400" alt="Product">
           <div class="card-overlay">
-            <button class="quick-view-btn">Quick View</button>
+
           </div>
           <button class="wishlist-btn">
             <i class="far fa-heart"></i>
@@ -461,9 +460,9 @@
           <div class="card-price">
             <span class="current-price">$59.99</span>
           </div>
-          <button class="add-to-cart-btn">
-            <i class="fas fa-shopping-cart"></i>
-            Add to Cart
+          <button class="view-product-btn">
+            <i class="fas fa-eye"></i>
+            View Product
           </button>
         </div>
       </div>
@@ -474,7 +473,7 @@
         <div class="card-image">
           <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400" alt="Product">
           <div class="card-overlay">
-            <button class="quick-view-btn">Quick View</button>
+
           </div>
           <button class="wishlist-btn">
             <i class="far fa-heart"></i>
@@ -494,9 +493,9 @@
           <div class="card-price">
             <span class="current-price">$149.99</span>
           </div>
-          <button class="add-to-cart-btn">
-            <i class="fas fa-shopping-cart"></i>
-            Add to Cart
+          <button class="view-product-btn">
+            <i class="fas fa-eye"></i>
+            View Product
           </button>
         </div>
       </div>
@@ -506,7 +505,7 @@
         <div class="card-image">
           <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400" alt="Product">
           <div class="card-overlay">
-            <button class="quick-view-btn">Quick View</button>
+
           </div>
           <button class="wishlist-btn">
             <i class="far fa-heart"></i>
@@ -526,9 +525,9 @@
           <div class="card-price">
             <span class="current-price">$49.99</span>
           </div>
-          <button class="add-to-cart-btn">
-            <i class="fas fa-shopping-cart"></i>
-            Add to Cart
+          <button class="view-product-btn">
+            <i class="fas fa-eye"></i>
+            View Product
           </button>
         </div>
       </div>
@@ -539,7 +538,7 @@
         <div class="card-image">
           <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=400" alt="Product">
           <div class="card-overlay">
-            <button class="quick-view-btn">Quick View</button>
+
           </div>
           <button class="wishlist-btn">
             <i class="far fa-heart"></i>
@@ -560,9 +559,9 @@
             <span class="current-price">$34.99</span>
             <span class="original-price">$41.99</span>
           </div>
-          <button class="add-to-cart-btn">
-            <i class="fas fa-shopping-cart"></i>
-            Add to Cart
+          <button class="view-product-btn">
+            <i class="fas fa-eye"></i>
+            View Product
           </button>
         </div>
       </div>
@@ -572,7 +571,7 @@
         <div class="card-image">
           <img src="/img/shoes.jpg" alt="Product">
           <div class="card-overlay">
-            <button class="quick-view-btn">Quick View</button>
+
           </div>
           <button class="wishlist-btn">
             <i class="far fa-heart"></i>
@@ -592,9 +591,9 @@
           <div class="card-price">
             <span class="current-price">$89.99</span>
           </div>
-          <button class="add-to-cart-btn">
-            <i class="fas fa-shopping-cart"></i>
-            Add to Cart
+          <button class="view-product-btn">
+            <i class="fas fa-eye"></i>
+            View Product
           </button>
         </div>
       </div>
@@ -605,7 +604,7 @@
         <div class="card-image">
           <img src="https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=400" alt="Product">
           <div class="card-overlay">
-            <button class="quick-view-btn">Quick View</button>
+
           </div>
           <button class="wishlist-btn">
             <i class="far fa-heart"></i>
@@ -625,9 +624,9 @@
           <div class="card-price">
             <span class="current-price">$54.99</span>
           </div>
-          <button class="add-to-cart-btn">
-            <i class="fas fa-shopping-cart"></i>
-            Add to Cart
+          <button class="view-product-btn">
+            <i class="fas fa-eye"></i>
+            View Product
           </button>
         </div>
       </div>
@@ -639,7 +638,7 @@
         <div class="card-image">
           <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400" alt="Product">
           <div class="card-overlay">
-            <button class="quick-view-btn">Quick View</button>
+
           </div>
           <button class="wishlist-btn">
             <i class="far fa-heart"></i>
@@ -660,9 +659,9 @@
             <span class="current-price">$67.49</span>
             <span class="original-price">$89.99</span>
           </div>
-          <button class="add-to-cart-btn">
-            <i class="fas fa-shopping-cart"></i>
-            Add to Cart
+          <button class="view-product-btn">
+            <i class="fas fa-eye"></i>
+            View Product
           </button>
         </div>
       </div>
@@ -673,7 +672,7 @@
         <div class="card-image">
           <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400" alt="Product">
           <div class="card-overlay">
-            <button class="quick-view-btn">Quick View</button>
+
           </div>
           <button class="wishlist-btn">
             <i class="far fa-heart"></i>
@@ -693,9 +692,9 @@
           <div class="card-price">
             <span class="current-price">$94.99</span>
           </div>
-          <button class="add-to-cart-btn">
-            <i class="fas fa-shopping-cart"></i>
-            Add to Cart
+          <button class="view-product-btn">
+            <i class="fas fa-eye"></i>
+            View Product
           </button>
         </div>
       </div>
@@ -705,7 +704,7 @@
         <div class="card-image">
           <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=400" alt="Product">
           <div class="card-overlay">
-            <button class="quick-view-btn">Quick View</button>
+
           </div>
           <button class="wishlist-btn">
             <i class="far fa-heart"></i>
@@ -725,9 +724,9 @@
           <div class="card-price">
             <span class="current-price">$34.99</span>
           </div>
-          <button class="add-to-cart-btn">
-            <i class="fas fa-shopping-cart"></i>
-            Add to Cart
+          <button class="view-product-btn">
+            <i class="fas fa-eye"></i>
+            View Product
           </button>
         </div>
       </div>
@@ -738,7 +737,7 @@
         <div class="card-image">
           <img src="https://images.unsplash.com/photo-1582418702059-97ebafb35d09?w=400" alt="Product">
           <div class="card-overlay">
-            <button class="quick-view-btn">Quick View</button>
+
           </div>
           <button class="wishlist-btn">
             <i class="far fa-heart"></i>
@@ -759,9 +758,9 @@
             <span class="current-price">$24.49</span>
             <span class="original-price">$34.99</span>
           </div>
-          <button class="add-to-cart-btn">
-            <i class="fas fa-shopping-cart"></i>
-            Add to Cart
+          <button class="view-product-btn">
+            <i class="fas fa-eye"></i>
+            View Product
           </button>
         </div>
       </div>
@@ -895,7 +894,6 @@
       }
     });
   });
-
 
 </script>
 </body>
