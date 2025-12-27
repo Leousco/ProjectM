@@ -1,0 +1,332 @@
+/* =========================
+   RESET & BASE
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    overflow: hidden;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+.container {
+    display: flex;
+    /* min-height: 100vh; */
+    position: relative;
+    height: 100vh;
+}
+
+/* =========================
+   IMAGE SECTION
+========================= */
+.image-section {
+    flex: 1;
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80')
+        center / cover no-repeat;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.image-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    pointer-events: none;
+}
+
+/* Slide image when switching */
+.container.register-mode .image-section {
+    transform: translateX(100%);
+}
+
+/* =========================
+   FORM SECTION
+========================= */
+.form-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 48px; */
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: auto;
+}
+
+/* Counter slide */
+.container.register-mode .form-section {
+    transform: translateX(-100%);
+}
+
+/* =========================
+   FORM WRAPPER
+========================= */
+.form-wrapper {
+    width: 100%;
+    max-width: 420px;
+    overflow: hidden;
+    background-color: red;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+}
+
+/* =========================
+   FORM SLIDER
+========================= */
+.form-container {
+    display: flex;
+    width: 200%;
+    transition: transform 0.6s ease;
+}
+
+.container.register-mode .form-container {
+    transform: translateX(-50%);
+}
+
+/* =========================
+   FORMS
+========================= */
+.form {
+    width: 50%;
+    padding: 10px;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Hide inactive form properly */
+.container:not(.register-mode) #registerForm {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.container.register-mode #loginForm {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 28px;
+}
+
+/* =========================
+   INPUTS
+========================= */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-row {
+    display: flex;
+    gap: 15px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+    background: #f9f9f9;
+    transition: 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #667eea;
+    background: #fff;
+}
+
+/* =========================
+   PASSWORD TOGGLE
+========================= */
+.password-input-wrapper {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #999;
+}
+
+.toggle-password:hover {
+    color: #667eea;
+}
+
+/* =========================
+   LINKS
+========================= */
+.forgot-password {
+    text-align: right;
+    margin-bottom: 18px;
+}
+
+.forgot-password a {
+    font-size: 13px;
+    color: #667eea;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    color: #764ba2;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-primary {
+    color: #fff;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.35);
+}
+
+/* =========================
+   DIVIDER
+========================= */
+.divider {
+    margin: 24px 0;
+    text-align: center;
+    position: relative;
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    inset: 50% 0 auto 0;
+    height: 1px;
+    background: #e0e0e0;
+}
+
+.divider span {
+    background: #fff;
+    padding: 0 12px;
+    font-size: 13px;
+    color: #999;
+    position: relative;
+}
+
+/* =========================
+   SWITCH FORM
+========================= */
+.switch-form {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-top: 18px;
+}
+
+.switch-form a {
+    margin-left: 5px;
+    font-weight: 600;
+    color: #667eea;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.switch-form a:hover {
+    color: #764ba2;
+}
+
+/* =========================
+   CHECKBOX
+========================= */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.checkbox-group input {
+    width: auto;
+    margin-right: 8px;
+}
+
+/* =========================
+   RESPONSIVE (NO ANIMATIONS)
+========================= */
+@media (max-width: 968px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .image-section {
+        height: 220px;
+        transform: none !important;
+    }
+
+    .form-section {
+        transform: none !important;
+        padding: 32px 20px;
+    }
+
+    .form-container {
+        width: 100%;
+        transform: none !important;
+        flex-direction: column;
+    }
+
+    .form {
+        width: 100%;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 26px;
+    }
+
+    .input-row {
+        flex-direction: column;
+    }
+}

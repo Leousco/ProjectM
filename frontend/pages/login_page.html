@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login_page_styles.css">
+</head>
+<body>
+    
+    <div class="container" id="container">
+        <div class="image-section"></div>
+        
+        <div class="form-section">
+            <div class="form-wrapper">
+                <div class="form-container">
+                    <!-- Login Form -->
+                    <div class="form active" id="loginForm">
+                        <h2>Welcome Back</h2>
+                        <p class="subtitle">Please login to your account</p>
+                        
+                        <form onsubmit="handleLogin(event)">
+                            <div class="input-group">
+                                <label for="loginUsername">Username</label>
+                                <input type="text" id="loginUsername" placeholder="Enter your username" required>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="loginPassword">Password</label>
+                                <div class="password-input-wrapper">
+                                    <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                                    <button type="button" class="toggle-password" onclick="togglePassword('loginPassword')">
+                                        👁️
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="forgot-password">
+                                <a href="#" onclick="event.preventDefault()">Forgot Password?</a>
+                            </div>
+                            
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="rememberMe">
+                                <label for="rememberMe">Remember me</label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </form>
+                        
+                        <div class="divider">
+                            <span>or</span>
+                        </div>
+                        
+                        <div class="switch-form">
+                            Don't have an account?
+                            <a onclick="switchToRegister()">Sign up</a>
+                        </div>
+                    </div>
+
+                    <!-- Register Form -->
+                    <div class="form" id="registerForm">
+                        <h2>Create Account</h2>
+                        <p class="subtitle">Sign up to get started</p>
+                        
+                        <form onsubmit="handleRegister(event)">
+                            <div class="input-group">
+                                <label for="registerUsername">Username</label>
+                                <input type="text" id="registerUsername" placeholder="Choose a username" required>
+                            </div>
+                            
+                            <div class="input-row">
+                                <div class="input-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" placeholder="First name" required>
+                                </div>
+                                
+                                <div class="input-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" placeholder="Last name" required>
+                                </div>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="Enter your email" required>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="registerPassword">Password</label>
+                                <div class="password-input-wrapper">
+                                    <input type="password" id="registerPassword" placeholder="Create a password" required>
+                                    <button type="button" class="toggle-password" onclick="togglePassword('registerPassword')">
+                                        👁️
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="confirmPassword">Confirm Password</label>
+                                <div class="password-input-wrapper">
+                                    <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+                                    <button type="button" class="toggle-password" onclick="togglePassword('confirmPassword')">
+                                        👁️
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="agreeTerms" required>
+                                <label for="agreeTerms">I agree to the Terms & Conditions</label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Create Account</button>
+                        </form>
+                        
+                        <div class="divider">
+                            <span>or</span>
+                        </div>
+                        
+                        <div class="switch-form">
+                            Already have an account?
+                            <a onclick="switchToLogin()">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<script>
+    function switchToRegister() {
+        const container = document.getElementById('container');
+        
+        // Add transitioning class for image fade effect
+        container.classList.add('transitioning');
+        
+        // After a short delay, switch to register mode
+        setTimeout(() => {
+            container.classList.add('register-mode');
+            
+            // Remove transitioning class after animation completes
+            setTimeout(() => {
+                container.classList.remove('transitioning');
+            }, 400);
+        }, 100);
+    }
+
+    function switchToLogin() {
+        const container = document.getElementById('container');
+        
+        // Add transitioning class for image fade effect
+        container.classList.add('transitioning');
+        
+        // After a short delay, switch to login mode
+        setTimeout(() => {
+            container.classList.remove('register-mode');
+            
+            // Remove transitioning class after animation completes
+            setTimeout(() => {
+                container.classList.remove('transitioning');
+            }, 400);
+        }, 100);
+    }
+
+    function togglePassword(inputId) {
+        const input = document.getElementById(inputId);
+        input.type = input.type === 'password' ? 'text' : 'password';
+    }
+
+    function handleLogin(event) {
+        event.preventDefault();
+        const username = document.getElementById('loginUsername').value;
+        const password = document.getElementById('loginPassword').value;
+        
+        console.log('Login attempt:', { username, password });
+        alert('Login functionality would be implemented here!');
+    }
+
+    function handleRegister(event) {
+        event.preventDefault();
+        const username = document.getElementById('registerUsername').value;
+        const firstName = document.getElementById('firstName').value;
+        const lastName = document.getElementById('lastName').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('registerPassword').value;
+        const confirmPassword = document.getElementById('confirmPassword').value;
+        
+        if (password !== confirmPassword) {
+            alert('Passwords do not match!');
+            return;
+        }
+        
+        console.log('Register attempt:', { username, firstName, lastName, email, password });
+        alert('Registration functionality would be implemented here!');
+    }
+</script>
+</body>
+</html>
