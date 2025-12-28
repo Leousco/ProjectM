@@ -1,121 +1,128 @@
 <header>
-    <nav>
-      <div class="wrapper">
-        <div class="logo"><a href="#">Urbanite</a></div>
-  
-        <ul class="nav-links">
-          <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
-  
-          <li><a href="index.html">Home</a></li>
-  
-          <li class="dropdown">
-            <a href="#" class="desktop-item">
-              Shop &nbsp;<i class="fa-solid  fa-caret-down"></i>
-            </a>
-            <ul class="drop-menu">
-              <li><a href="productsPage/products_page.html">All Products</a></li>
-              <li><a href="#">New Arrivals</a></li>
-              <li><a href="#">Trending</a></li>
-  
-              <li class="nested-dropdown">
-                <a href="#">Categories <i class="fas fa-caret-right"></i></a>
-                <ul class="nested-menu">
-                  <li><a href="#">Tops</a></li>
-                  <li><a href="#">Bottoms</a></li>
-                  <li><a href="#">Footwear</a></li>
+  <nav>
+    <div class="wrapper">
+      <div class="logo"><a href="#">Urbanite</a></div>
+
+      <ul class="nav-links">
+        <label for="close-btn" class="btn close-btn"
+          ><i class="fas fa-times"></i
+        ></label>
+
+        <li><a href="index.html">Home</a></li>
+
+        <li class="dropdown">
+          <a href="#" class="desktop-item">
+            Shop &nbsp;<i class="fa-solid fa-caret-down"></i>
+          </a>
+          <ul class="drop-menu">
+            <li><a href="products_page.html">All Products</a></li>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Trending</a></li>
+
+            <li class="nested-dropdown">
+              <a href="#">Categories <i class="fas fa-caret-right"></i></a>
+              <ul class="nested-menu">
+                <li><a href="#">Tops</a></li>
+                <li><a href="#">Bottoms</a></li>
+                <li><a href="#">Footwear</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="desktop-item">
+            Create <i class="fa-solid fa-caret-down"></i>
+          </a>
+          <ul class="drop-menu">
+            <li><a href="#">Design Your Own</a></li>
+            <li><a href="#">Collaborate</a></li>
+            <li><a href="#">My Designs</a></li>
+            <li><a href="#">Templates</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="desktop-item"
+            >Community Hub &nbsp;<i class="fa-solid fa-caret-down"></i
+          ></a>
+          <input type="checkbox" id="showMega" />
+          <label for="showMega" class="mobile-item">Mega Menu</label>
+
+          <div class="mega-box">
+            <div class="content">
+              <div class="row">
+                <img
+                  src="https://fadzrinmadu.github.io/hosted-assets/responsive-mega-menu-and-dropdown-menu-using-only-html-and-css/img.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="row">
+                <header>Community & Social</header>
+                <ul class="mega-links">
+                  <li><a href="#">Forum & Reviews</a></li>
+                  <li><a href="#">Leaderboard</a></li>
+                  <li><a href="#">Contests & Events</a></li>
+                  <li><a href="#">Creators</a></li>
                 </ul>
-              </li>
-              
-            </ul>
-          </li>
-  
-          <li class="dropdown">
-            <a href="#" class="desktop-item">
-              Create <i class="fa-solid fa-caret-down"></i>
-            </a>
-            <ul class="drop-menu">
-              <li><a href="#">Design Your Own</a></li>
-              <li><a href="#">Collaborate</a></li>
-              <li><a href="#">My Designs</a></li>
-              <li><a href="#">Templates</a></li>
-            </ul>
-          </li>
-  
-          <li class="dropdown">
-            <a href="#" class="desktop-item">Community Hub &nbsp;<i class="fa-solid  fa-caret-down"></i></a>
-            <input type="checkbox" id="showMega">
-            <label for="showMega" class="mobile-item">Mega Menu</label>
-            
-            <div class="mega-box">
-              <div class="content">
-                <div class="row">
-                  <img src="https://fadzrinmadu.github.io/hosted-assets/responsive-mega-menu-and-dropdown-menu-using-only-html-and-css/img.jpg" alt="">
-                </div>
-                <div class="row">
-                  <header>Community & Social</header>
-                  <ul class="mega-links">
-                    <li><a href="#">Forum & Reviews</a></li> 
-                    <li><a href="#">Leaderboard</a></li> 
-                    <li><a href="#">Contests & Events</a></li> 
-                    <li><a href="#">Creators</a></li> 
-                  </ul>
-                </div>
-                <div class="row">
-                  <header>Support & Security</header>
-                  <ul class="mega-links">
-                    <li><a href="#">Account Settings</a></li>
-                    <li><a href="#">Help & FAQ</a></li>
-                    <li><a href="#">Points & Rewards Info</a></li>
-                    <li><a href="#">Report & Feedback</a></li>
-                  </ul>
-                </div>
+              </div>
+              <div class="row">
+                <header>Support & Security</header>
+                <ul class="mega-links">
+                  <li><a href="#">Account Settings</a></li>
+                  <li><a href="#">Help & FAQ</a></li>
+                  <li><a href="#">Points & Rewards Info</a></li>
+                  <li><a href="#">Report & Feedback</a></li>
+                </ul>
               </div>
             </div>
-          </li>
-  
+          </div>
+        </li>
+
         <li><a href="#">About</a></li>
-  
+
         <li class="divider"></li>
-  
+
         <li><i class="fa-solid fa-magnifying-glass" id="search"></i></li>
         <li><i class="fa-solid fa-bell" id="notification"></i></li>
         <li><i class="fa-solid fa-cart-shopping" id="cart"></i></li>
-  
-        <img src="img/astronaut.jpg" class="user-pic" onclick="toggleMenu()"> 
+
+        <img src="../assets/images/homepage/user.jpg" class="user-pic" onclick="toggleMenu()" />
         &nbsp;
-        <a style="color: white;" href="loginPage/login_page.html">User</a>
-  
-          <div class="sub-menu-wrap" id="subMenu">
-            <div class="sub-menu">
-              <div class="user-info">
-                <img src="img/astronaut.jpg">
-                <h2>User</h2>
-              </div>
-  
-              <hr>
-  
-              <a href="#" class="sub-menu-link">
-                <i class="fa-solid fa-user"></i>
-                <p>Profile</p>
-                <span>></span>
-              </a>
-              <a href="#" class="sub-menu-link">
-                <i class="fa-solid fa-object-group"></i>
-                <p>My Designs</p>
-                <span>></span>
-              </a>
-              <a href="#" class="sub-menu-link">
-                <i class="fa-solid fa-heart"></i>
-                <p>Favorites</p>
-                <span>></span>
-              </a>
-              <a href="#" class="sub-menu-link">
-                <i class="fa-solid fa-right-from-bracket"></i>
-                <p> Logout</p>
-                <span>></span>
-              </a>
+        <a style="color: white" href="login_page.html">User</a>
+
+        <div class="sub-menu-wrap" id="subMenu">
+          <div class="sub-menu">
+            <div class="user-info">
+              <img src="../assets/images/homepage/user.jpg" />
+              <h2>User</h2>
             </div>
+
+            <hr/>
+
+            <a href="#" class="sub-menu-link">
+              <i class="fa-solid fa-user"></i>
+              <p>Profile</p>
+              <span>></span>
+            </a>
+            <a href="#" class="sub-menu-link">
+              <i class="fa-solid fa-object-group"></i>
+              <p>My Designs</p>
+              <span>></span>
+            </a>
+            <a href="#" class="sub-menu-link">
+              <i class="fa-solid fa-heart"></i>
+              <p>Favorites</p>
+              <span>></span>
+            </a>
+            <a href="#" class="sub-menu-link">
+              <i class="fa-solid fa-right-from-bracket"></i>
+              <p>Logout</p>
+              <span>></span>
+            </a>
           </div>
-      </div>
-    </nav>
-  </header>
+        </div>
+      </ul>
+    </div>
+  </nav>
+</header>

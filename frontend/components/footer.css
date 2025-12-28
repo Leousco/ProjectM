@@ -20,9 +20,9 @@
   .footer-logo a {
     font-size: 28px;
     font-weight: 700;
-    /* background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
+    -webkit-text-fill-color: transparent;
     color: white;
     background-clip: text;
     text-decoration: none;
