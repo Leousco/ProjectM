@@ -13,7 +13,7 @@
   left: -250px;
   top: 50%;
   transform: translateY(-50%);
-  height: 70%;
+  height: 420px;
   background: var(--bg-secondary);
   border-radius: 16px;
   border: 1px solid var(--border);
@@ -235,11 +235,7 @@ label[for="nav-toggle"] .fa-angle-left {
   direction: ltr;
   cursor: pointer;
   z-index: 1;
-  transition: color 0.2s;
-}
-
-.nav-button:hover {
-  color: var(--navbar-light-primary);
+  transition: color 0.3s, transform 0.3s, box-shadow 0.3s, background 0.3s;
 }
 
 .nav-button span {
@@ -259,8 +255,26 @@ label[for="nav-toggle"] .fa-angle-left {
 
 /* Hover effects - Updated for new structure with section titles */
 .nav-button:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 16px 0 0 16px;
+  color: var(--navbar-light-primary);
+  background: rgba(99, 102, 241, 0.08);
+  transform: translateX(6px);
+  box-shadow: inset 4px 0 0 rgba(99, 102, 241, 0.5);
+}
+
+.nav-button span {
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  white-space: nowrap;
+}
+
+#nav-toggle:checked ~ #nav-content .nav-button span {
+  opacity: 1;
+}
+
+.nav-button .fas {
+  min-width: 3rem;
+  text-align: center;
+  transition: transform 0.3s;
 }
 
 /* === RESPONSIVE STYLES === */
